@@ -22,22 +22,27 @@
             </div>
 
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <table class="min-w-full">
+            <div class="min-w-full">
+                <div class="w-full overflow-x-auto">
+                    <table class="w-full">
                     <thead>
                         <tr>
-                            <th class="py-2 px-4 border-b">Blood Type</th>
-                            <th class="py-2 px-4 border-b">Name</th>
+                        <th class="py-2 px-4 border-b">Blood Type</th>
+                        <th class="py-2 px-4 border-b">Name</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($data as $donation)
-                            <tr>
-                                <td class="py-2 px-4 border-b">{{ $donation->blood_type }}</td>
-                                <td class="py-2 px-4 border-b">{{ $donation->name }}</td>
-                            </tr>
+                        <tr>
+                        <td class="py-2 px-4 border-b">{{ $donation->blood_type }}</td>
+                        <td class="py-2 px-4 border-b">{{ $donation->name }}</td>
+                        </tr>
                         @endforeach
                     </tbody>
-                </table>
+                    </table>
+                </div>
+            </div>
+
 
                 <!-- Pagination Links -->
                 <div class="mt-4">
