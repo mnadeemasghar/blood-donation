@@ -13,9 +13,10 @@ class BloodDonationController extends Controller
      */
     public function index()
     {
-        $data = User::all();
-        return view('donations',compact('data'));
+        $data = User::paginate(10);
+        return view('donations', compact('data'));
     }
+
 
     /**
      * Show the form for creating a new resource.
