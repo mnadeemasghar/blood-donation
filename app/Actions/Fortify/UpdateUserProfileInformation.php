@@ -19,8 +19,8 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
     {
         Validator::make($input, [
             'name' => ['required', 'string', 'max:255'],
-            'blood_type' => ['nullable', 'string', 'min:3', 'max:255'],
-            'contact_number' => ['nullable', 'string', 'min:3', 'max:255'],
+            'blood_type' => ['nullable', 'string'],
+            'contact_number' => ['nullable', 'string'],
             'email' => ['required', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],
             'photo' => ['nullable', 'mimes:jpg,jpeg,png', 'max:1024'],
         ])->validateWithBag('updateProfileInformation');

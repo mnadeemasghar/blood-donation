@@ -62,9 +62,13 @@
         <!-- Blood Type -->
         <div class="col-span-6 sm:col-span-4">
             <x-label for="blood_type" value="{{ __('Blood Type') }}" />
-            <x-input id="blood_type" type="text" class="mt-1 block w-full" wire:model.defer="state.blood_type" autocomplete="blood_type" />
+            <x-select id="blood_type" class="block mt-1 w-full" wire:model="state.blood_type" name="blood_type" :value="old('blood_type')" required
+                    :options="['A+' => 'A+', 'A-' => 'A-', 'B+' => 'B+', 'B-' => 'B-', 'AB+' => 'AB+', 'AB-' => 'AB-', 'O+' => 'O+', 'O-' => 'O-']">
+                <option value="" disabled selected>Select Blood Type</option>
+            </x-select>
             <x-input-error for="blood_type" class="mt-2" />
-        </div> 
+        </div>
+
 
         <!-- Contact Number -->
         <div class="col-span-6 sm:col-span-4">
