@@ -25,8 +25,8 @@
                 <table class="min-w-full">
                     <thead>
                         <tr>
-                            <td class="py-2 px-4 border-b">Blood Type</td>
-                            <td class="py-2 px-4 border-b">Name</td>
+                            <th class="py-2 px-4 border-b">Blood Type</th>
+                            <th class="py-2 px-4 border-b">Name</th>
                         </tr>
                     </thead>
                     <tbody>
