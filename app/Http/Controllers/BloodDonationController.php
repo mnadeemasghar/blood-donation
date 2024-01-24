@@ -65,4 +65,10 @@ class BloodDonationController extends Controller
     {
         //
     }
+
+    public function getDonationByBloodType($type)
+    {
+        $data = User::where('blood_type',$type)->paginate(10);
+        return view('donations', compact('data'));
+    }
 }

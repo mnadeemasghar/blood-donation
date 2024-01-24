@@ -10,16 +10,17 @@
 
             <!-- Blood Types -->
             <div class="mb-4">
-                <x-button>A+</x-button>
-                <x-button>A-</x-button>
-                <x-button>B+</x-button>
-                <x-button>B-</x-button>
-                <x-button>AB+</x-button>
-                <x-button>AB-</x-button>
-                <x-button>O+</x-button>
-                <x-button>O-</x-button>
+                <x-link :href="route('blood-donations.index')">All</x-link>
+                <x-link :href="route('blood_donations.blood_type',['blood_type'=>'A+'])">A+</x-link>
+                <x-link :href="route('blood_donations.blood_type',['blood_type'=>'A-'])">A-</x-link>
+                <x-link :href="route('blood_donations.blood_type',['blood_type'=>'B+'])">B+</x-link>
+                <x-link :href="route('blood_donations.blood_type',['blood_type'=>'B-'])">B-</x-link>
+                <x-link :href="route('blood_donations.blood_type',['blood_type'=>'AB+'])">AB+</x-link>
+                <x-link :href="route('blood_donations.blood_type',['blood_type'=>'AB-'])">AB-</x-link>
+                <x-link :href="route('blood_donations.blood_type',['blood_type'=>'O+'])">O+</x-link>
+                <x-link :href="route('blood_donations.blood_type',['blood_type'=>'O-'])">O-</x-link>
             </div>
-            
+
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <table class="min-w-full">
                     <thead>
