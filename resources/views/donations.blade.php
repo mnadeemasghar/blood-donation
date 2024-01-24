@@ -7,6 +7,19 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+
+            <!-- Blood Types -->
+            <div class="mb-4">
+                <x-button>A+</x-button>
+                <x-button>A-</x-button>
+                <x-button>B+</x-button>
+                <x-button>B-</x-button>
+                <x-button>AB+</x-button>
+                <x-button>AB-</x-button>
+                <x-button>O+</x-button>
+                <x-button>O-</x-button>
+            </div>
+            
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <table class="min-w-full">
                     <thead>
