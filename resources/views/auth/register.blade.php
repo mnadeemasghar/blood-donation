@@ -21,12 +21,16 @@
 
             <div class="mt-4">
                 <x-label for="blood_type" value="{{ __('Blood Type') }}" />
-                <x-input id="blood_type" class="block mt-1 w-full" type="text" name="blood_type" :value="old('blood_type')" required />
+                <x-select id="blood_type" class="block mt-1 w-full" name="blood_type" :value="old('blood_type')" required
+                        :options="['A+' => 'A+', 'A-' => 'A-', 'B+' => 'B+', 'B-' => 'B-', 'AB+' => 'AB+', 'AB-' => 'AB-', 'O+' => 'O+', 'O-' => 'O-']">
+                    <option value="" disabled selected>Select Blood Type</option>
+                </x-select>
             </div>
+
 
             <div class="mt-4">
                 <x-label for="contact_number" value="{{ __('Contact Number') }}" />
-                <x-input id="contact_number" class="block mt-1 w-full" type="text" name="contact_number" :value="old('contact_number')" required />
+                <x-input id="contact_number" type="tel" class="block mt-1 w-full" type="text" name="contact_number" :value="old('contact_number')" required />
             </div>
 
             <div class="mt-4">
