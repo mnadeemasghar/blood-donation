@@ -7,41 +7,41 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-
-            <!-- Blood Types -->
-            <div class="mb-4">
-                <x-link :href="route('blood-donations.index')">All</x-link>
-                <x-link :href="route('blood_donations.blood_type',['blood_type'=>'A+'])">A+</x-link>
-                <x-link :href="route('blood_donations.blood_type',['blood_type'=>'A-'])">A-</x-link>
-                <x-link :href="route('blood_donations.blood_type',['blood_type'=>'B+'])">B+</x-link>
-                <x-link :href="route('blood_donations.blood_type',['blood_type'=>'B-'])">B-</x-link>
-                <x-link :href="route('blood_donations.blood_type',['blood_type'=>'AB+'])">AB+</x-link>
-                <x-link :href="route('blood_donations.blood_type',['blood_type'=>'AB-'])">AB-</x-link>
-                <x-link :href="route('blood_donations.blood_type',['blood_type'=>'O+'])">O+</x-link>
-                <x-link :href="route('blood_donations.blood_type',['blood_type'=>'O-'])">O-</x-link>
-            </div>
-
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-            <div class="min-w-full">
-                <div class="w-full overflow-x-auto">
-                    <table class="w-full">
-                    <thead>
-                        <tr>
-                        <th class="py-2 px-4 border-b">Blood Type</th>
-                        <th class="py-2 px-4 border-b">Name</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($data as $donation)
-                        <tr>
-                        <td class="py-2 px-4 border-b">{{ $donation->blood_type }}</td>
-                        <td class="py-2 px-4 border-b">{{ $donation->name }}</td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                    </table>
+
+                <!-- Blood Types -->
+                <div class="m-4">
+                    <x-link :href="route('blood-donations.index')">All</x-link>
+                    <x-link :href="route('blood_donations.blood_type',['blood_type'=>'A+'])">A+</x-link>
+                    <x-link :href="route('blood_donations.blood_type',['blood_type'=>'A-'])">A-</x-link>
+                    <x-link :href="route('blood_donations.blood_type',['blood_type'=>'B+'])">B+</x-link>
+                    <x-link :href="route('blood_donations.blood_type',['blood_type'=>'B-'])">B-</x-link>
+                    <x-link :href="route('blood_donations.blood_type',['blood_type'=>'AB+'])">AB+</x-link>
+                    <x-link :href="route('blood_donations.blood_type',['blood_type'=>'AB-'])">AB-</x-link>
+                    <x-link :href="route('blood_donations.blood_type',['blood_type'=>'O+'])">O+</x-link>
+                    <x-link :href="route('blood_donations.blood_type',['blood_type'=>'O-'])">O-</x-link>
                 </div>
-            </div>
+                
+                <div class="min-w-full">
+                    <div class="w-full overflow-x-auto">
+                        <table class="w-full">
+                        <thead>
+                            <tr>
+                            <th class="py-2 px-4 border-b">Blood Type</th>
+                            <th class="py-2 px-4 border-b">Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($data as $donation)
+                            <tr>
+                            <td class="py-2 px-4 border-b">{{ $donation->blood_type }}</td>
+                            <td class="py-2 px-4 border-b">{{ $donation->name }}</td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
 
 
                 <!-- Pagination Links -->
