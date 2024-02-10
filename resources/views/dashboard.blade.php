@@ -11,14 +11,14 @@
                 <!-- <x-welcome /> -->
                 <div class="m-4">
                     {{__("Looking for:")}}
-                    <x-link :href="route('blood_donations.blood_type',['blood_type'=>'A+'])">A+</x-link>
-                    <x-link :href="route('blood_donations.blood_type',['blood_type'=>'A-'])">A-</x-link>
-                    <x-link :href="route('blood_donations.blood_type',['blood_type'=>'B+'])">B+</x-link>
-                    <x-link :href="route('blood_donations.blood_type',['blood_type'=>'B-'])">B-</x-link>
-                    <x-link :href="route('blood_donations.blood_type',['blood_type'=>'AB+'])">AB+</x-link>
-                    <x-link :href="route('blood_donations.blood_type',['blood_type'=>'AB-'])">AB-</x-link>
-                    <x-link :href="route('blood_donations.blood_type',['blood_type'=>'O+'])">O+</x-link>
-                    <x-link :href="route('blood_donations.blood_type',['blood_type'=>'O-'])">O-</x-link>
+                    <x-link :href="route('blood_donations.blood_type',['blood_type'=>'A+'])">A+ ({{ $blood_group_counts ? $blood_group_counts['A+']:"0" }})</x-link>
+                    <x-link :href="route('blood_donations.blood_type',['blood_type'=>'A-'])">A- ({{ $blood_group_counts ? $blood_group_counts['A-']:"0" }})</x-link>
+                    <x-link :href="route('blood_donations.blood_type',['blood_type'=>'B+'])">B+ ({{ $blood_group_counts ? $blood_group_counts['B+']:"0" }})</x-link>
+                    <x-link :href="route('blood_donations.blood_type',['blood_type'=>'B-'])">B- ({{ $blood_group_counts ? $blood_group_counts['B-']:"0" }})</x-link>
+                    <x-link :href="route('blood_donations.blood_type',['blood_type'=>'AB+'])">AB+ ({{ $blood_group_counts ? $blood_group_counts['AB+']:"0" }})</x-link>
+                    <x-link :href="route('blood_donations.blood_type',['blood_type'=>'AB-'])">AB- ({{ $blood_group_counts ? $blood_group_counts['AB-']:"0" }})</x-link>
+                    <x-link :href="route('blood_donations.blood_type',['blood_type'=>'O+'])">O+ ({{ $blood_group_counts ? $blood_group_counts['O+']:"0" }})</x-link>
+                    <x-link :href="route('blood_donations.blood_type',['blood_type'=>'O-'])">O- ({{ $blood_group_counts ? $blood_group_counts['O-']:"0" }})</x-link>
                 </div>
             </div>
         </div>
