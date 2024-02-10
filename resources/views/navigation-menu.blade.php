@@ -18,6 +18,9 @@
                     <x-nav-link href="{{ route('blood-donations.index') }}" :active="request()->routeIs('blood-donations.index')">
                         {{ __('Donations') }}
                     </x-nav-link>
+                    <x-nav-link href="{{ route('blood-requests.index') }}" :active="request()->routeIs('blood-requests.index')">
+                        {{ __('Blood Request') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -147,6 +150,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link href="{{ route('blood-donations.index') }}" :active="request()->routeIs('blood-donations.index')">
                 {{ __('Donations') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('blood-requests.index') }}" :active="request()->routeIs('blood-requests.index')">
+                {{ __('Blood Request') }}
             </x-responsive-nav-link>
         </div>
 
